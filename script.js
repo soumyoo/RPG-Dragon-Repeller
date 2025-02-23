@@ -161,7 +161,8 @@ function buyHealth() {
         health += 10;
         goldText.innerText = gold;
     	healthText.innerText = health;
-		body.style.backgroundImage="url('images/buyHealth.webp')"   
+		body.style.backgroundImage="url('images/buyHealth.webp')"
+	    text.innerText = "You bought some health 💚";
     } else {
         text.innerText = "You do NOT have enough gold to buy health. 💰📉";
 		body.style.backgroundImage="url('images/noGold.webp')"
