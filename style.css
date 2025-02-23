@@ -11,6 +11,31 @@
       color: black;
       
   }
+
+  #preload {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    background: 
+        url('images/attack.webp') no-repeat,
+        url('images/beast.webp') no-repeat,
+        url('images/buyHealth.webp') no-repeat,
+        url('images/buyWeapon.webp') no-repeat,
+        url('images/cave.webp') no-repeat,
+        url('images/default.webp') no-repeat,
+        url('images/dodge.webp') no-repeat,
+        url('images/dragon.webp') no-repeat,
+        url('images/lose.webp') no-repeat,
+        url('images/noGold.webp') no-repeat,
+        url('images/slime.webp') no-repeat,
+        url('images/store.webp') no-repeat,
+        url('images/town.webp') no-repeat,
+        url('images/win.webp') no-repeat;
+ }
+ 
   
   
   #text {
