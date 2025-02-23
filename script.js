@@ -18,6 +18,22 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterNameText = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
+function preloadImages(imagePaths) {
+    imagePaths.forEach(path => {
+        const img = new Image();
+        img.src = path;
+    });
+}
+
+preloadImages([
+    'images/attack.webp', 'images/beast.webp', 'images/buyHealth.webp',
+    'images/buyWeapon.webp', 'images/cave.webp', 'images/default.webp',
+    'images/dodge.webp', 'images/dragon.webp', 'images/lose.webp',
+    'images/noGold.webp', 'images/slime.webp', 'images/store.webp',
+    'images/town.webp', 'images/win.webp'
+]);
+
+
 const weapons = [
 	{
 		name: "stick",
