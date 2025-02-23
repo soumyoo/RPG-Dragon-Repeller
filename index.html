@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>RPG - Dragon Repeller</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+<div id="game" class="slow-fade">
+  <div id="stats">
+    <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+    <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+    <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+  </div>
+  <div id="controls">
+    <button id="button1">Go to store</button>
+    <button id="button2">Go to cave</button>
+    <button id="button3">Fight dragon</button>
+  </div>
+  <div id="monsterStats">
+    <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+    <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+  </div>
+  <div id="text"><p> Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.</p></div>
+  <p id="notice">"Tap the game controls to start your adventure with music. Click anywhere outside to mute the game." 🎮🔥</p>
+</div>
+
+<script  src="script.js"></script>
+
+<audio id="music" loop>
+  <source src="audio/Fairy-Tail-OST-Battle-Epic-Music-Mix.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let music = document.getElementById("music");
+    let gameArea = document.getElementById("game");
+
+    // Try to play music automatically on page load
+    let playPromise = music.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        console.log("Autoplay blocked, waiting for user interaction...");
+      });
+    }
+
+    // Mute when clicking outside the game area
+    document.addEventListener("click", (event) => {
+      if (!gameArea.contains(event.target)) {
+        music.muted = true; // Mute music when clicking outside
+      } else {
+        music.muted = false; // Unmute if clicking inside the game
+        music.play();
+      }
+    });
+  });
+</script>
+
+
+</body>
+
+
+
+</html>
