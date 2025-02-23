@@ -185,7 +185,7 @@ function buyWeapon() {
 			body.style.backgroundImage="url('images/noGold.webp')"
     	} 
     } else {
-		text.innerText = "You already have the most powerful weapon!";
+		text.innerText = "You already have the most powerful weapon! THE SWORD!";
         button2.innerText = "Sell weapon for 15 gold";
 		button2.onclick = sellWeapon;
 	}
